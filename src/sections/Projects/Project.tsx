@@ -14,7 +14,7 @@ import "./Project.css";
 import {
   FaGlobe,
   FaPalette,
-  FaVideo,
+  //FaVideo,
   FaThLarge,
 } from "react-icons/fa";
 

@@ -39,7 +39,7 @@ const ThemeToggle = () => {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";s
+    const newTheme = theme === "light" ? "dark" : "light";
 
     localStorage.setItem("theme", newTheme);
 document.documentElement.setAttribute("data-theme", newTheme);
