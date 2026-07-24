@@ -1,0 +1,48 @@
+:root {
+  /* Brand */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  /* Light Theme */
+  --bg: #ffffff;
+  --surface: #f8fafc;
+
+  --text: #0f172a;
+  --text-secondary: #475569;
+
+  --border: #e2e8f0;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  /* Shadow */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --warning:#facc15;
+  
+  /* Animation */
+  --transition:.35s cubic-bezier(.4,0,.2,1);
+
+  /* Layout */
+  --container-width: 1200px;
+--space-sm: 0.5rem;
+--space-md: 1rem;
+--space-lg: 2rem;
+--space-xl: 4rem;
+--space-2xl: 6rem;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  
+  --surface: #1f2d42;
+
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --border: #334155;
+
+  --shadow: 0 12px 30px rgba(0, 0, 0, .4);
+}

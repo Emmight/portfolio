@@ -1,0 +1,461 @@
+
+.navbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:1rem 1.5rem;
+
+    background:
+color-mix(
+    in srgb,
+    var(--surface) 75%,
+    transparent
+);
+
+backdrop-filter:blur(22px);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    margin:1rem auto;
+
+    box-shadow:
+
+        0 8px 30px rgba(0,0,0,.08);
+    position:sticky;
+
+    top:1rem;
+
+    z-index:1000;
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    letter-spacing:-.5px;
+  
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.logo span{
+
+    color:var(--primary);
+}
+
+.logo:hover{
+
+    color:var(--primary);
+
+    transform:translateY(-2px);
+}
+/* ===========================
+   Desktop Links
+=========================== */
+
+.nav-links{
+
+    display:none;
+
+    gap:2rem;
+
+    align-items:center;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:var(--transition);
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:var(--transition);
+}
+
+.nav-links a:hover{
+
+    color:var(--text);
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+/* ===========================
+   Right Actions
+=========================== */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+}
+
+/* Hide desktop button on mobile */
+
+.nav-actions .button{
+
+    display:none;
+}
+
+/* ===========================
+   Menu Button
+=========================== */
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    background:none;
+
+    color:var(--text);
+
+    cursor:pointer;
+}
+
+/* ===========================
+   Overlay
+=========================== */
+
+.nav-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(6px);
+
+    z-index:1001;
+
+    animation:fade .25s ease;
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+    }
+
+    to{
+
+        opacity:1;
+    }
+}
+/* ===========================
+   Mobile Menu
+=========================== */
+
+.nav-container{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:280px;
+
+    max-width:85%;
+
+    height:100vh;
+
+    background:var(--surface);
+
+    border-left:1px solid var(--border);
+
+    padding:2rem;
+
+    display:flex;
+
+    flex-direction:column;
+  
+    box-shadow:
+
+        -20px 0 50px rgba(0,0,0,.2);
+
+    animation:slideIn .3s ease;
+}
+
+/* ===========================
+   Close Button
+=========================== */
+
+.close{
+    position: relative;
+    z-index: 2;
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    align-self:flex-end;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    margin-bottom:2rem;
+}
+
+.close:hover{
+    background:var(--primary);
+    color:white;
+
+    transform:rotate(90deg);
+}
+
+/* ===========================
+   Mobile Links
+=========================== */
+
+.mobile-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+}
+
+.mobile-links a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.mobile-links a:hover{
+
+    color:var(--primary);
+
+    transform:translateX(8px);
+}
+
+/* ===========================
+   Mobile Button
+=========================== */
+
+.mobile-button{
+
+    margin-top:auto;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes slideIn{
+
+    from{
+
+        transform:translateX(100%);
+    }
+
+    to{
+
+        transform:translateX(0);
+    }
+}
+
+/* ===========================
+   Desktop
+=========================== */
+
+@media (min-width:768px){
+
+    .nav-links{
+
+        display:flex;
+    }
+
+    .nav-actions .button{
+
+        display:inline-flex;
+    }
+
+    .menu{
+
+        display:none;
+    }
+
+    .nav-overlay{
+
+        display:none;
+    }
+}
+
+/* ===========================
+   Top spacing
+=========================== */
+
+.container:first-child{
+
+    padding-top:1rem;
+}
+
+.nav-links{
+    display:none;
+    gap:.5rem;
+    align-items:center;
+}
+
+.nav-links a{
+
+    padding:.7rem 1.2rem;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    background:transparent;
+}
+
+.nav-links a:hover{
+
+    background:var(--surface);
+
+    color:var(--text);
+}
+
+.nav-links a.active{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    box-shadow:
+
+        0 10px 25px
+        color-mix(
+            in srgb,
+            var(--primary) 35%,
+            transparent
+        ),
+
+        inset 0 1px 1px rgba(255,255,255,.15);
+}
+
+.nav-container a{
+
+    width:100%;
+
+    padding:.85rem 1rem;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+    font-weight:600;
+}
+
+.nav-container a:hover{
+
+    background:var(--surface);
+}
+
+.nav-container a.active{
+
+    background:
+        color-mix(
+            in srgb,
+            var(--primary) 15%,
+            transparent
+        );
+
+    color:var(--primary);
+
+    border:1px solid
+        color-mix(
+            in srgb,
+            var(--primary) 30%,
+            transparent
+        );
+}
+
+.nav-links a:hover{
+
+    transform:translateY(-2px);
+
+    background:var(--surface);
+
+    color:var(--text);
+}
+.nav-links a.active{
+
+    transform:translateY(-2px);
+}

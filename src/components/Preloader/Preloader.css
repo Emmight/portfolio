@@ -1,0 +1,167 @@
+.preloader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--background);
+
+    user-select: none;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    overflow:hidden;
+}
+
+/* =======================
+   Glow
+======================= */
+
+.preloader::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    background:var(--primary);
+
+    opacity:.12;
+
+    filter:blur(120px);
+
+    border-radius:50%;
+
+    animation:glow 3s ease-in-out infinite;
+}
+
+.preloader-content{
+
+    text-align:center;
+
+    z-index:2;
+
+    animation:fadeUp .8s ease forwards;
+}
+
+.preloader-logo{
+
+    font-size:clamp(2.5rem,6vw,4rem);
+
+    color:var(--text);
+
+    letter-spacing:.2rem;
+
+    margin-bottom:.7rem;
+
+    font-weight:800;
+  
+    text-shadow: 0 0 20px
+        color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+.preloader-text{
+
+    color:var(--text-secondary);
+
+    margin-bottom:2rem;
+
+    font-size:1rem;
+
+    letter-spacing:.05rem;
+}
+
+/* =======================
+   Loading Bar
+======================= */
+
+.loader{
+
+    width:220px;
+
+    height:4px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:999px;
+    
+    background: var(--border);
+    background: color-mix(
+    in srgb,
+    var(--surface) 85%,
+    var(--text) 10%
+);
+}
+
+.loader-fill{
+
+    height:100%;
+
+    width:0;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    animation: loading 1.4s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+/* =======================
+   Animations
+======================= */
+
+@keyframes loading{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+@keyframes glow{
+
+    0%{
+
+        transform:scale(.9);
+    }
+
+    50%{
+
+        transform:scale(1.15);
+    }
+
+    100%{
+
+        transform:scale(.9);
+    }
+}

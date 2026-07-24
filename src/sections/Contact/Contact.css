@@ -1,0 +1,361 @@
+.contact{
+    padding:6rem 0;
+}
+
+.contact-content{
+    max-width:700px;
+    margin:0 auto 4rem;
+    text-align:center;
+}
+
+.contact-title{
+    color:var(--text);
+    font-size:2.6rem;
+    margin-bottom:1rem;
+}
+
+.contact-description{
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+
+/* ===========================
+   Layout
+=========================== */
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:2rem;
+
+    align-items:start;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.contact-card,
+.contact-form-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:2rem;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+}
+
+.contact-card:hover,
+.contact-form-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+}
+
+/* ===========================
+   Availability
+=========================== */
+
+.availability{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.7rem;
+
+    padding:.9rem 1rem;
+
+    background:rgba(34,197,94,.08);
+
+    border:1px solid rgba(34,197,94,.2);
+
+    border-radius:999px;
+
+    color:#22c55e;
+
+    font-weight:400;
+
+    margin-bottom:2rem;
+
+    width:fit-content;
+}
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(34,197,94,.5);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 10px rgba(34,197,94,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(34,197,94,0);
+
+    }
+
+}
+
+/* ===========================
+   Contact List
+=========================== */
+
+.contact-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+}
+
+.contact-item{
+
+    display:flex;
+
+    gap:1rem;
+
+    align-items:flex-start;
+}
+
+.contact-item svg{
+
+    font-size:1.2rem;
+
+    color:var(--primary);
+
+    margin-top:.25rem;
+
+    flex-shrink:0;
+}
+
+.contact-item strong{
+
+    display:block;
+
+    margin-bottom:.3rem;
+
+    color:var(--text);
+}
+
+.contact-item a{
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    transition:.3s;
+}
+
+.contact-item a:hover{
+
+    color:var(--primary);
+}
+
+.contact-item address{
+
+    color:var(--text-secondary);
+
+    font-style:normal;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.contact-form-card h3{
+
+    color:var(--text);
+
+    margin-bottom:.5rem;
+}
+
+.contact-form-card p{
+
+    color:var(--text-secondary);
+
+    margin-bottom:2rem;
+
+    line-height:1.7;
+}
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:1rem 1.1rem;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font:inherit;
+
+    transition:.3s;
+
+    resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(59,130,246,.12);
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.contact-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.contact{
+
+padding:5rem 0;
+
+}
+
+.contact-title{
+
+font-size:2.1rem;
+
+}
+
+.contact-card,
+.contact-form-card{
+
+padding:1.5rem;
+
+}
+
+}
+
+.form-error,
+.form-success{
+    position:relative;
+
+    width:100%;
+
+    padding: .5rem 1rem;
+
+    margin-top:.8rem;
+
+    border-radius:14px;
+
+    font-size:.9rem;
+
+    font-weight:500;
+
+    overflow:hidden;
+
+    animation:fadeIn .3s ease;
+}
+
+.form-error::before,
+.form-success::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+    bottom:0;
+
+    width:5px;
+}
+
+.form-error{
+
+    color:#fa4f4f;
+
+    background:#fdefef;
+
+    border:1px solid rgba(251,211,211,0.35);
+}
+
+.form-error::before{
+
+    background:#ef4444;
+}
+
+.form-success{
+
+    color:#86efac;
+
+    background:#10251a;
+
+    border:1px solid rgba(34,197,94,.35);
+}
+
+.form-success::before{
+
+    background:#22c55e;
+}

@@ -1,0 +1,46 @@
+.scroll-top{
+
+    position:fixed;
+
+    right:2rem;
+
+    bottom:2rem;
+
+    width:56px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 30px rgba(59,130,246,.35);
+
+    transition:var(--transition);
+
+    z-index:999;
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-6px);
+
+    background:var(--primary-hover);
+}
+
+.scroll-top:active{
+
+    transform:scale(.95);
+}
