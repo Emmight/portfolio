@@ -15,7 +15,8 @@ const [activeSection, setActiveSection] = useState("home");
 
 useEffect(() => {
   const handleScroll = () => {
-    const sections = document.querySelectorAll("section[id]");
+const sections =
+  document.querySelectorAll<HTMLElement>("section[id]");
 
     let current = "home";
 

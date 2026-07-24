@@ -32,7 +32,7 @@ const ProjectInfo = ({ project }: ProjectInfoProps) => {
 
         <h3>Highlights</h3>
 
-        <ul type="none" className="modal-features">
+        <ul className="modal-features">
           {project.features.map((feature) => (
             <li key={feature}>
               ✓ {feature}
