@@ -42,8 +42,7 @@ const Hero = ()=> (
   download
   className="resume-button"
 >
-  <FaDownload />
-  <span>{hero.secondaryButton}</span>
+  <FaDownload /> {hero.secondaryButton}
 </a>
           </div> 
            </div>

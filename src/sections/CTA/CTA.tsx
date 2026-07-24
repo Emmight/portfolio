@@ -26,7 +26,7 @@ const CTA = () => {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/resume/Emmanuel_Ayoade_Full_Stack_Developer_Resume.pdf"
               download
             >
               <Button

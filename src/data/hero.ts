@@ -15,7 +15,7 @@ export const hero = {
 "I build modern websites, web applications, and creative visual experiences that help businesses establish a strong online presence, engage their audience, and grow with confidence.",
   
   primaryButton: "Let's Work Together →",
-  secondaryButton: "Download CV",
-  resume: "/resume/"
+  secondaryButton: "Download Resume",
+  resume: "/resume/Emmanuel_Ayoade_Full_Stack_Developer_Resume.pdf"
 }
 

@@ -8,7 +8,7 @@ export const contact = {
 
   phone: "+2349113960286",
 
-  github: "https://github.com/...",
+  github: "https://github.com/Emmight",
 
   linkedin: "https://www.linkedin.com/in/emmanuel-ayoade-b6a432255",
 
