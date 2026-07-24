@@ -11,7 +11,7 @@ const Preloader = () => {
         </h1>
 
         <p className="preloader-text">
-          Full-Stack Developer & Creative Designer
+          Full-Stack Developer & Designer
         </p>
 
         <div className="loader">

@@ -34,11 +34,11 @@ const filters = [
     value: "design",
     icon: <FaPalette />,
   },
-  {
+ /* {
     label: "Motion",
     value: "motion",
     icon: <FaVideo />,
-  },
+  },*/
 ] as const;
 
 interface ProjectCardProps {
