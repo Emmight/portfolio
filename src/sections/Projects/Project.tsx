@@ -81,7 +81,7 @@ const ProjectCard = ({
       </h3>
 
       <p className="project-description">
-        {project.description}
+        {project.shortDescription}
       </p>
 
       <ul className="project-technologies">

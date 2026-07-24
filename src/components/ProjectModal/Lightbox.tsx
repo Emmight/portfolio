@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./Lightbox.css";
 

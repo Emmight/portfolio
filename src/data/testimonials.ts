@@ -1,4 +1,4 @@
-import type { Testimonial } from "../types/testimonials";
+import type { testimonials } from "../types/testimonials";
 
 export const testimonials: Testimonial[] = [
   {
@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
 
   {
     id: 3,
-    name: "Michael Brown",
+    name: "Michael Victor",
     role: "Startup Founder",
     company: "Elevate Digitals",
     message:
