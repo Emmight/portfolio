@@ -1,4 +1,4 @@
-export interface testimonials {
+export interface testimonial {
   id: number;
   name: string;
   role: string;
