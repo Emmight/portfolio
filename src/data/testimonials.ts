@@ -1,6 +1,6 @@
 import type { testimonials } from "../types/testimonials";
 
-export const testimonials: Testimonial[] = [
+export const testimonials: testimonial[] = [
   {
     id: 1,
     name: "Daniel Johnson",
