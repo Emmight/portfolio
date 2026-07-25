@@ -14,7 +14,7 @@ import FAQ from "./sections/FAQ/FAQ";
 import Footer from "./sections/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Preloader from "./components/Preloader/Preloader";
-
+import WhatsAppButton from "./components/WhatsApp/WhatsApp";
 
 
 function App() {
@@ -58,6 +58,7 @@ useEffect(() => {
       <FAQ />
       <Footer />
       <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 }

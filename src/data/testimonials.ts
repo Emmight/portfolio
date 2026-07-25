@@ -7,7 +7,7 @@ export const testimonials: testimonial[] = [
     role: "Small Business Owner",
     company: "NovaTech Solutions",
     message:
-      "Emmanuel was professional throughout the project. Communication was clear, deadlines were met, and the final product exceeded my expectations. I would gladly work with him again.",
+      "Emmanuel was professional throughout the project. Communication was clear, deadlines were met, and the final product exceeded my expectations.",
     avatar: "/images/testimonials/44df8a8008521b73d41ea3414e9f32b5.jpg",
   },
 
@@ -17,7 +17,7 @@ export const testimonials: testimonial[] = [
     role: "Creative Director",
     company: "BrightPixel Studio",
     message:
-      "From branding to development, Emmanuel paid attention to every detail. The website looks modern, performs smoothly, and perfectly represents our vision.",
+      "Emmanuel brought our ideas to life with a clean, modern design that truly reflects our brand. He was responsive to feedback, easy to work with, and committed to getting every detail right.",
     avatar: "/images/testimonials/d46704b604144578444bb8ab081d6cf3.jpg",
   },
 
@@ -27,7 +27,7 @@ export const testimonials: testimonial[] = [
     role: "Startup Founder",
     company: "Elevate Digitals",
     message:
-      "I appreciated Emmanuel's ability to turn ideas into a polished product. His technical skills and design sense made the entire process straightforward and enjoyable.",
+      "What impressed me most was Emmanuel's ability to combine creativity with technical skill. He didn't just build a website, he created a solution that was easy to use, visually appealing, and delivered exactly what we needed.",
     avatar: "/images/testimonials/e14a8371f954ca9c153ba39cb4af9b87.jpg",
   },
 ];

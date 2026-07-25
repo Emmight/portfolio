@@ -22,14 +22,14 @@ backdrop-filter:blur(22px);
 
     border-radius:24px;
 
-    margin:1rem auto;
+    margin: auto;
 
     box-shadow:
 
         0 8px 30px rgba(0,0,0,.08);
     position:sticky;
 
-    top:1rem;
+    top:.3rem;
 
     z-index:1000;
 }

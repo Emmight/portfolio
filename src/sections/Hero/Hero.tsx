@@ -20,8 +20,9 @@ const Hero = ()=> (
   
   <Container>
     <section className="hero" id="home"> 
-    <p className="hero-greeting" data-aos="fade-down"> {hero.greeting} </p>
+
     <div className="hero-content">
+        <p className="hero-greeting" data-aos="fade-down"> {hero.greeting} </p>
     <h1 data-aos="zoom-in"> {hero.name} </h1>
       <div className="hero-title">
     <TypeAnimation
