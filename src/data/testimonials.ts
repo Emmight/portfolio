@@ -7,7 +7,7 @@ export const testimonials: testimonial[] = [
     role: "Small Business Owner",
     company: "NovaTech Solutions",
     message:
-      "Emmanuel was professional throughout the project. Communication was clear, deadlines were met, and the final product exceeded my expectations.",
+      "Working with Emmanuel was a smooth experience from start to finish. He listened to what I wanted, communicated clearly throughout the project, and delivered a website that looked even better than I imagined. I'd definitely recommend him.",
     avatar: "/images/testimonials/44df8a8008521b73d41ea3414e9f32b5.jpg",
   },
 
