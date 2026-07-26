@@ -36,7 +36,7 @@ const Hero = ()=> (
     <p data-aos="fade-up"> {hero.description} </p>
 
      <div className="hero-buttons" data-aos="fade-up">
-   <a id="" href="#contact-form"> <Button text={hero.primaryButton} variant="primary" />
+   <a id="" href="#contactFormCard"> <Button text={hero.primaryButton} variant="primary" />
    </a>
     <a
   href={hero.resume}

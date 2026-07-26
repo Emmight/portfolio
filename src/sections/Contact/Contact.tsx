@@ -232,7 +232,7 @@ emailjs
 
           {/* RIGHT CARD */}
 
-          <div
+          <div id="contactFormCard"
             className="contact-form-card"
             data-aos="zoom-in"
           >

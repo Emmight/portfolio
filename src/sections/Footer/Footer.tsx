@@ -45,7 +45,7 @@ const Footer = () => (
         <div className="footer-social">
           <h3 data-aos="zoom-in">Connect</h3>
 
-          <ul data-aos="fade-up">
+          <ul>
 
             <li>
               <a
