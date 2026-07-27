@@ -46,6 +46,8 @@
     flex-wrap:wrap;
 
     margin-bottom:2.5rem;
+  
+    -webkit-overflow-scrolling: touch;
 }
 
 .skill-tab{
@@ -70,9 +72,10 @@
 
     transition:var(--transition);
 
-    font-size:.95rem;
+    font-size:.7rem;
 
     font-weight:600;
+  
 }
 
 .skill-tab:hover{
