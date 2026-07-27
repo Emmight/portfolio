@@ -88,8 +88,8 @@ const sections =
 
         <div className="nav-actions">
           <ThemeToggle />
-          <Button text="Hire Me" variant="primary" />
-
+      <a id="" href="#contactFormCard"> <Button text="Hire Me" variant="primary" />
+   </a>
           <button
             className="menu"
             onClick={() => setIsOpen(true)}
@@ -136,10 +136,8 @@ const sections =
             </div>
 
             <div className="mobile-button">
-              <Button
-                text="Hire Me"
-                variant="primary"
-              />
+          <a id="" href="#contactFormCard"> <Button text="Hire Me" variant="primary" onClick={() => setIsOpen(false)} />
+   </a>
             </div>
 
           </div>
