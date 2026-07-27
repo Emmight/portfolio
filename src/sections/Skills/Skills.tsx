@@ -1,86 +1,106 @@
+import { useState } from "react";
 import { skills } from "../../data/skills";
 import Container from "../../components/Container/Container";
 import "./Skills.css";
 
-const Skills = () => (
-  <Container>
-    <section className="skills" id="skills">
-      <h2
-        className="skill-title"
-        data-aos="zoom-in"
-      >
-        {skills.title}
-      </h2>
+const Skills = () => {
+  const [activeTab, setActiveTab] = useState(0);
 
-      <p
-        className="skill-subtitle"
-        data-aos="fade-up"
-      >
-        {skills.subtitle}
-      </p>
+  const currentCategory = skills.categories[activeTab];
 
-      <div className="skills-grid">
+  return (
+    <Container>
+      <section className="skills" id="skills">
 
-        {skills.categories.map((category) => {
+        <h2
+          className="skill-title"
+          data-aos="zoom-in"
+        >
+          {skills.title}
+        </h2>
 
-          const CategoryIcon = category.icon;
+        <p
+          className="skill-subtitle"
+          data-aos="fade-up"
+        >
+          {skills.subtitle}
+        </p>
 
-          return (
-            <article
-              className="skill-card"
-              key={category.title}
-              data-aos="zoom-in"
-            >
+        {/* Tabs */}
 
-              <div className="skill-card-header">
+        <div
+          className="skills-tabs"
+          data-aos="fade-up"
+        >
+          {skills.categories.map((category, index) => {
 
-                <div className="skill-icon">
+            const Icon = category.icon;
 
-                  <CategoryIcon />
+            return (
+              <button
+                key={category.title}
+                className={
+                  activeTab === index
+                    ? "skill-tab active"
+                    : "skill-tab"
+                }
+                onClick={() => setActiveTab(index)}
+              >
+                <Icon size={18} />
+
+                <span>{category.title}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Active Category */}
+
+        <article
+          className="skill-card"
+          data-aos="fade-up"
+          key={currentCategory.title}
+        >
+
+          <div className="skill-card-header">
+
+            <div className="skill-icon">
+
+              <currentCategory.icon />
+
+            </div>
+
+            <h3>{currentCategory.title}</h3>
+
+          </div>
+
+          <div className="technology-list">
+
+            {currentCategory.technologies.map((technology) => {
+
+              const TechIcon = technology.icon;
+
+              return (
+                <div
+                  className="technology-item"
+                  key={technology.name}
+                >
+
+                  <TechIcon className="technology-icon" />
+
+                  <span>{technology.name}</span>
 
                 </div>
+              );
+            })}
 
-                <h3>{category.title}</h3>
+          </div>
 
-              </div>
+        </article>
 
-              <div className="technology-list">
-
-                {category.technologies.map(
-                  (technology) => {
-
-                    const TechIcon =
-                      technology.icon;
-
-                    return (
-
-                      <div
-                        className="technology-item"
-                        key={technology.name}
-                        data-aos="fade-up"
-                      >
-
-    <TechIcon className="technology-icon" />
-
-                        <span>
-                          {technology.name}
-                        </span>
-
-                      </div>
-
-                    );
-                  }
-                )}
-
-              </div>
-
-            </article>
-          );
-        })}
-
-      </div>
-    </section>
-  </Container>
-);
+      </section>
+    </Container>
+  );
+};
 
 export default Skills;

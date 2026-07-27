@@ -29,19 +29,93 @@
 
     line-height:1.8;
 }
+/* ===========================
+   Tabs
+=========================== */
+
+.skills-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+    margin-bottom:2.5rem;
+}
+
+.skill-tab{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.6rem;
+
+    padding:.85rem 1.4rem;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    background:var(--surface);
+
+    color:var(--text-secondary);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-size:.95rem;
+
+    font-weight:600;
+}
+
+.skill-tab:hover{
+
+    border-color:var(--primary);
+
+    color:var(--text);
+
+    transform:translateY(-2px);
+}
+
+.skill-tab svg{
+
+    transition:var(--transition);
+}
+
+.skill-tab:hover svg{
+
+    transform:rotate(-8deg);
+}
+
+.skill-tab.active{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:#fff;
+
+    box-shadow:
+        0 12px 30px
+        rgba(59,130,246,.25);
+}
+
+.skill-tab.active svg{
+
+    color:#fff;
+}
 
 /* ===========================
    Grid
 =========================== */
 
-.skills-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:2rem;
-}
 
 /* ===========================
    Card
@@ -50,6 +124,10 @@
 .skill-card{
 
     position:relative;
+
+    max-width:850px;
+
+    margin:0 auto;
 
     background:var(--surface);
 
@@ -228,6 +306,7 @@
     scale(1.15);
 }
 
+
 /* ===========================
    Responsive
 =========================== */
@@ -243,7 +322,28 @@
 
     grid-template-columns:1fr;
 }
+.skills-tabs{
 
+    justify-content:flex-start;
+
+    overflow-x:auto;
+
+    flex-wrap:nowrap;
+
+    padding-bottom:.4rem;
+
+    scrollbar-width:none;
+}
+
+.skills-tabs::-webkit-scrollbar{
+
+    display:none;
+}
+
+.skill-tab{
+
+    flex-shrink:0;
+}
 .skill-card{
 
     padding:1.6rem;
