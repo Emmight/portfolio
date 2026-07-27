@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles/variables.css";
 import "./styles/globals.css";
 import App from "./App.tsx";
+import { Analytics } from "@vercel/analytics/react";
 
 const savedTheme = localStorage.getItem("theme");
 
@@ -18,5 +19,6 @@ document.documentElement.setAttribute("data-theme", theme);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
+    <Analytics />
   </StrictMode>
 );
