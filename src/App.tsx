@@ -46,7 +46,7 @@ useEffect(() => {
   
   return (
     <div>
-      <Navbar logo="Emmight" />
+      <Navbar />
       <Hero />
       <About />
       <Skills />

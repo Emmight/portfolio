@@ -37,32 +37,44 @@ backdrop-filter:blur(22px);
 /* ===========================
    Logo
 =========================== */
-
 .logo{
 
-    font-size:1.5rem;
+    display:flex;
 
-    font-weight:700;
+    align-items:center;
+
+    gap:.8rem;
+
+    text-decoration:none;
 
     color:var(--text);
 
-    letter-spacing:-.5px;
-  
-    cursor:pointer;
+    font-weight:700;
 
-    transition:var(--transition);
+    font-size:1.4rem;
+}
+
+.logo-image{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    transition:.3s ease;
+}
+
+.logo:hover .logo-image{
+
+    transform:rotate(-5deg) scale(1.05);
 }
 
 .logo span{
 
-    color:var(--primary);
-}
-
-.logo:hover{
-
-    color:var(--primary);
-
-    transform:translateY(-2px);
+    letter-spacing:-.5px;
 }
 /* ===========================
    Desktop Links
@@ -458,4 +470,19 @@ backdrop-filter:blur(22px);
 .nav-links a.active{
 
     transform:translateY(-2px);
+}
+
+@media (max-width:480px){
+
+    .logo-image{
+
+        width:36px;
+
+        height:36px;
+    }
+
+    .logo{
+
+        font-size:1.2rem;
+    }
 }

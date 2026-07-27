@@ -4,12 +4,9 @@ import { links } from "../../data/links";
 import Button from "../Button/Button";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Navbar.css";
+import logo from "../../assets/logo.svg";
 
-interface NavbarProps {
-  logo: string;
-}
-
-const Navbar = ({ logo }: NavbarProps) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 const [activeSection, setActiveSection] = useState("home");
 
@@ -62,10 +59,15 @@ const sections =
   return (
     <>
       <nav className="navbar">
+<a href="#home" className="logo">
+  <img
+    src={logo}
+    alt="Emmight Logo"
+    className="logo-image"
+  />
 
-        <h2 className="logo">
-          {logo}
-        </h2>
+  <span>Emmight</span>
+</a>
 
         {/* Desktop Navigation */}
         <div className="nav-links">

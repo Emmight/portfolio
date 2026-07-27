@@ -41,8 +41,8 @@ export const projects: Project[] = [
       "/images/projects/sms/sms6.png",
     ],
 
-    github: "#",
-    live: "#",
+    github: "",
+    live: "",
 
     featured: true,
   },
@@ -125,8 +125,8 @@ export const projects: Project[] = [
       "/images/projects/eshop/shop5.png",
     ],
 
-    github: "#",
-    live: "#",
+    github: "",
+    live: "",
 
     featured: false,
   },
@@ -162,6 +162,10 @@ export const projects: Project[] = [
       "/images/projects/design/ajokesalon.webp",
       "/images/projects/design/crownhair.webp",
       "/images/projects/design/sophiacuisine.webp",
+      "/images/projects/design/finestcollection.webp",
+      "/images/projects/design/youthsundayservice.webp",
+      "/images/projects/design/birthdayflyer.webp",
+      
       "/images/projects/design/victoriabd.webp",
     ],
 
