@@ -1,413 +1,127 @@
+/* ===========================
+   Navbar
+=========================== */
 
-.navbar{
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:1rem 1.5rem;
+    padding: 1rem 1.5rem;
 
     background:
-color-mix(
-    in srgb,
-    var(--surface) 75%,
-    transparent
-);
+        color-mix(
+            in srgb,
+            var(--surface) 75%,
+            transparent
+        );
 
-backdrop-filter:blur(22px);
+    backdrop-filter: blur(22px);
 
-    border:1px solid var(--border);
+    border: 1px solid var(--border);
 
-    border-radius:24px;
+    border-radius: 24px;
 
     margin: auto;
 
     box-shadow:
+        0 8px 30px rgba(0, 0, 0, .08);
 
-        0 8px 30px rgba(0,0,0,.08);
-    position:sticky;
+    position: sticky;
 
-    top:.3rem;
+    top: .3rem;
 
-    z-index:1000;
+    z-index: 1000;
 }
+
 
 /* ===========================
    Logo
 =========================== */
-.logo{
 
-    display:flex;
+.logo {
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:.8rem;
+    gap: .8rem;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    color:var(--text);
+    color: var(--text);
 
-    font-weight:700;
+    font-weight: 700;
 
-    font-size:1.4rem;
+    font-size: 1.4rem;
 }
 
-.logo-image{
+.logo-image {
+    width: 42px;
 
-    width:42px;
+    height: 42px;
 
-    height:42px;
+    object-fit: contain;
 
-    object-fit:contain;
+    flex-shrink: 0;
 
-    flex-shrink:0;
-
-    transition:.3s ease;
+    transition: .3s ease;
 }
 
-.logo:hover .logo-image{
-
-    transform:rotate(-5deg) scale(1.05);
+.logo:hover .logo-image {
+    transform: rotate(-5deg) scale(1.05);
 }
 
-.logo span{
-
-    letter-spacing:-.5px;
-}
-/* ===========================
-   Desktop Links
-=========================== */
-
-.nav-links{
-
-    display:none;
-
-    gap:2rem;
-
-    align-items:center;
+.logo span {
+    letter-spacing: -.5px;
 }
 
-.nav-links a{
-
-    text-decoration:none;
-
-    color:var(--text-secondary);
-
-    font-weight:500;
-
-    position:relative;
-
-    transition:var(--transition);
-}
-
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--primary);
-
-    transition:var(--transition);
-}
-
-.nav-links a:hover{
-
-    color:var(--text);
-}
-
-.nav-links a:hover::after{
-
-    width:100%;
-}
 
 /* ===========================
-   Right Actions
+   Desktop Navigation
 =========================== */
 
-.nav-actions{
+.nav-links {
+    display: none;
 
-    display:flex;
+    align-items: center;
 
-    align-items:center;
-
-    gap:1rem;
+    gap: .5rem;
 }
 
-/* Hide desktop button on mobile */
+.nav-links a {
+    padding: .7rem 1.2rem;
 
-.nav-actions .button{
+    border-radius: 999px;
 
-    display:none;
-}
+    text-decoration: none;
 
-/* ===========================
-   Menu Button
-=========================== */
+    color: var(--text-secondary);
 
-.menu{
+    font-weight: 600;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border:none;
-
-    background:none;
-
-    color:var(--text);
-
-    cursor:pointer;
-}
-
-/* ===========================
-   Overlay
-=========================== */
-
-.nav-overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.55);
-
-    backdrop-filter:blur(6px);
-
-    z-index:1001;
-
-    animation:fade .25s ease;
-}
-
-@keyframes fade{
-
-    from{
-
-        opacity:0;
-    }
-
-    to{
-
-        opacity:1;
-    }
-}
-/* ===========================
-   Mobile Menu
-=========================== */
-
-.nav-container{
-
-    position:fixed;
-
-    top:0;
-
-    right:0;
-
-    width:280px;
-
-    max-width:85%;
-
-    height:100vh;
-
-    background:var(--surface);
-
-    border-left:1px solid var(--border);
-
-    padding:1rem 2rem 9rem 2rem;
-
-    display:flex;
-
-    flex-direction:column;
-  
-    box-shadow:
-
-        -20px 0 50px rgba(0,0,0,.2);
-
-    animation:slideIn .3s ease;
-}
-
-/* ===========================
-   Close Button
-=========================== */
-
-.close{
     position: relative;
-    z-index: 2;
-    width:45px;
-    height:45px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    transition: var(--transition);
 
-    align-self:flex-end;
-
-    border:none;
-    border-radius:50%;
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    cursor:pointer;
-
-    transition:var(--transition);
-
-    margin-bottom:2rem;
+    background: transparent;
 }
 
-.close:hover{
-    background:var(--primary);
-    color:white;
+.nav-links a:hover {
+    transform: translateY(-2px);
 
-    transform:rotate(90deg);
+    background: var(--surface);
+
+    color: var(--text);
 }
 
-/* ===========================
-   Mobile Links
-=========================== */
+.nav-links a.active {
+    background: var(--primary);
 
-.mobile-links{
+    color: #fff;
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:.5rem;
-}
-
-.mobile-links a{
-
-    text-decoration:none;
-
-    color:var(--text);
-
-    font-size:1.1rem;
-
-    font-weight:600;
-
-    transition:var(--transition);
-}
-
-.mobile-links a:hover{
-
-    color:var(--primary);
-
-    transform:translateX(8px);
-}
-
-/* ===========================
-   Mobile Button
-=========================== */
-
-.mobile-button{
-
-    margin-top:auto;
-}
-
-/* ===========================
-   Animation
-=========================== */
-
-@keyframes slideIn{
-
-    from{
-
-        transform:translateX(100%);
-    }
-
-    to{
-
-        transform:translateX(0);
-    }
-}
-
-/* ===========================
-   Desktop
-=========================== */
-
-@media (min-width:768px){
-
-    .nav-links{
-
-        display:flex;
-    }
-
-    .nav-actions .button{
-
-        display:inline-flex;
-    }
-
-    .menu{
-
-        display:none;
-    }
-
-    .nav-overlay{
-
-        display:none;
-    }
-}
-
-/* ===========================
-   Top spacing
-=========================== */
-
-.container:first-child{
-
-    padding-top:1rem;
-}
-
-.nav-links{
-    display:none;
-    gap:.5rem;
-    align-items:center;
-}
-
-.nav-links a{
-
-    padding:.7rem 1.2rem;
-
-    border-radius:999px;
-
-    text-decoration:none;
-
-    color:var(--text-secondary);
-
-    font-weight:600;
-
-    transition:var(--transition);
-
-    background:transparent;
-}
-
-.nav-links a:hover{
-
-    background:var(--surface);
-
-    color:var(--text);
-}
-
-.nav-links a.active{
-
-    background:var(--primary);
-
-    color:#fff;
+    transform: translateY(-2px);
 
     box-shadow:
-
         0 10px 25px
         color-mix(
             in srgb,
@@ -415,33 +129,217 @@ backdrop-filter:blur(22px);
             transparent
         ),
 
-        inset 0 1px 1px rgba(255,255,255,.15);
+        inset 0 1px 1px
+        rgba(255, 255, 255, .15);
 }
 
-.nav-container a{
 
-    width:100%;
+/* ===========================
+   Right Actions
+=========================== */
 
-    padding:.85rem 1rem;
+.nav-actions {
+    display: flex;
 
-    border-radius:14px;
+    align-items: center;
 
-    text-decoration:none;
-
-    color:var(--text);
-
-    transition:var(--transition);
-
-    font-weight:600;
+    gap: 1rem;
 }
 
-.nav-container a:hover{
 
-    background:var(--surface);
+/* Hide desktop button on mobile */
+
+.nav-actions .button {
+    display: none;
 }
 
-.nav-container a.active{
 
+/* ===========================
+   Mobile Menu Button
+=========================== */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: none;
+
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+
+/* ===========================
+   Overlay
+=========================== */
+
+.nav-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .55);
+
+    backdrop-filter: blur(6px);
+
+    z-index: 1001;
+
+    animation: fade .25s ease;
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ===========================
+   Mobile Menu
+=========================== */
+
+.nav-container {
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: 280px;
+
+    max-width: 85%;
+
+    height: 100vh;
+
+    background: var(--surface);
+
+    border-left: 1px solid var(--border);
+
+    padding: 1rem 2rem 9rem 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+        -20px 0 50px rgba(0, 0, 0, .2);
+
+    animation: slideIn .3s ease;
+}
+
+
+/* ===========================
+   Close Button
+=========================== */
+
+.close {
+    position: relative;
+
+    z-index: 2;
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    align-self: flex-end;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    margin-bottom: 2rem;
+}
+
+.close:hover {
+    background: var(--primary);
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* ===========================
+   Mobile Links
+=========================== */
+
+.mobile-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .5rem;
+}
+
+.mobile-links a {
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.mobile-links a:hover {
+    color: var(--primary);
+
+    transform: translateX(8px);
+}
+
+
+/* ===========================
+   Mobile Navigation Links
+=========================== */
+
+.nav-container a {
+    width: 100%;
+
+    padding: .85rem 1rem;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    transition: var(--transition);
+
+    font-weight: 600;
+}
+
+.nav-container a:hover {
+    background: var(--surface);
+}
+
+.nav-container a.active {
     background:
         color-mix(
             in srgb,
@@ -449,9 +347,9 @@ backdrop-filter:blur(22px);
             transparent
         );
 
-    color:var(--primary);
+    color: var(--primary);
 
-    border:1px solid
+    border: 1px solid
         color-mix(
             in srgb,
             var(--primary) 30%,
@@ -459,30 +357,78 @@ backdrop-filter:blur(22px);
         );
 }
 
-.nav-links a:hover{
 
-    transform:translateY(-2px);
+/* ===========================
+   Mobile Button
+=========================== */
 
-    background:var(--surface);
-
-    color:var(--text);
-}
-.nav-links a.active{
-
-    transform:translateY(-2px);
+.mobile-button {
+    margin-top: auto;
 }
 
-@media (max-width:480px){
 
-    .logo-image{
+/* ===========================
+   Animation
+=========================== */
 
-        width:36px;
+@keyframes slideIn {
 
-        height:36px;
+    from {
+        transform: translateX(100%);
     }
 
-    .logo{
+    to {
+        transform: translateX(0);
+    }
+}
 
-        font-size:1.2rem;
+
+/* ===========================
+   Desktop
+=========================== */
+
+@media (min-width: 768px) {
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-actions .button {
+        display: inline-flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav-overlay {
+        display: none;
+    }
+}
+
+
+/* ===========================
+   Top Spacing
+=========================== */
+
+.container:first-child {
+    padding-top: 1rem;
+}
+
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width: 480px) {
+
+    .logo-image {
+        width: 36px;
+
+        height: 36px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 }
