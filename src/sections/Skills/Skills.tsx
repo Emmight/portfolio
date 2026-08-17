@@ -4,9 +4,14 @@ import Container from "../../components/Container/Container";
 import "./Skills.css";
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState("All");
 
-  const currentCategory = skills.categories[activeTab];
+  const visibleCategories =
+    activeTab === "All"
+      ? skills.categories
+      : skills.categories.filter(
+          (category) => category.title === activeTab
+        );
 
   return (
     <Container>
@@ -32,7 +37,23 @@ const Skills = () => {
           className="skills-tabs"
           data-aos="fade-up"
         >
-          {skills.categories.map((category, index) => {
+
+          {/* All */}
+
+          <button
+            className={
+              activeTab === "All"
+                ? "skill-tab active"
+                : "skill-tab"
+            }
+            onClick={() => setActiveTab("All")}
+          >
+            All
+          </button>
+
+          {/* Categories */}
+
+          {skills.categories.map((category) => {
 
             const Icon = category.icon;
 
@@ -40,11 +61,13 @@ const Skills = () => {
               <button
                 key={category.title}
                 className={
-                  activeTab === index
+                  activeTab === category.title
                     ? "skill-tab active"
                     : "skill-tab"
                 }
-                onClick={() => setActiveTab(index)}
+                onClick={() =>
+                  setActiveTab(category.title)
+                }
               >
                 <Icon size={18} />
 
@@ -52,51 +75,68 @@ const Skills = () => {
               </button>
             );
           })}
+
         </div>
 
-        {/* Active Category */}
+        {/* Skills */}
 
-        <article
-          className="skill-card"
-          data-aos="fade-up"
-          key={currentCategory.title}
-        >
+        <div className="skills-grid">
 
-          <div className="skill-card-header">
+          {visibleCategories.map((category) => {
 
-            <div className="skill-icon">
+            const CategoryIcon = category.icon;
 
-              <currentCategory.icon />
+            return (
+              <article
+                className="skill-card"
+                key={category.title}
+                data-aos="zoom-in"
+              >
 
-            </div>
+                <div className="skill-card-header">
 
-            <h3>{currentCategory.title}</h3>
+                  <div className="skill-icon">
+                    <CategoryIcon />
+                  </div>
 
-          </div>
-
-          <div className="technology-list">
-
-            {currentCategory.technologies.map((technology) => {
-
-              const TechIcon = technology.icon;
-
-              return (
-                <div
-                  className="technology-item"
-                  key={technology.name}
-                >
-
-                  <TechIcon className="technology-icon" />
-
-                  <span>{technology.name}</span>
+                  <h3>{category.title}</h3>
 
                 </div>
-              );
-            })}
 
-          </div>
+                <div className="technology-list">
 
-        </article>
+                  {category.technologies.map(
+                    (technology) => {
+
+                      const TechIcon =
+                        technology.icon;
+
+                      return (
+                        <div
+                          className="technology-item"
+                          key={technology.name}
+                        >
+
+                          <TechIcon
+                            className="technology-icon"
+                          />
+
+                          <span>
+                            {technology.name}
+                          </span>
+
+                        </div>
+                      );
+                    }
+                  )}
+
+                </div>
+
+              </article>
+            );
+          })}
+
+        </div>
 
       </section>
     </Container>
