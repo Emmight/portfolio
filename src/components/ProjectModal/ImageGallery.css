@@ -1,5 +1,7 @@
 .gallery-wrapper{
     position:relative;
+    aspect-ratio: 16/9;
+    padding: 20px;
 }
 
 .gallery-arrow{

@@ -135,9 +135,8 @@
 .skill-card{
 
     position:relative;
-
-    max-width:850px;
-
+    /* max-width:850px; */
+    width: min(450px, 100%) ;
     margin:0 auto;
 
     background:var(--surface);
@@ -211,9 +210,9 @@
 
 .skill-icon{
 
-    width:58px;
+    width:45px;
 
-    height:58px;
+    height:48px;
 
     display:grid;
 
@@ -221,7 +220,7 @@
 
     border-radius:18px;
 
-    font-size:1.5rem;
+    font-size:1rem;
 
     color:white;
 

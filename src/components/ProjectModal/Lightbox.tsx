@@ -53,7 +53,6 @@ const Lightbox = ({
 
       <div
         className="lightbox"
-        onClick={(e) => e.stopPropagation()}
       >
 
         <button

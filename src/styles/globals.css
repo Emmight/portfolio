@@ -4,10 +4,13 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+html {
+  font-size: 95%;
+}
 body {
   background: var(--bg);
   color: var(--text);
-  padding: 20px;
+  padding: 20px 40px;
   font-family: Inter, sans-serif;
 
   transition: background .3s ease,

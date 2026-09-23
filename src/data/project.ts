@@ -8,7 +8,7 @@ export const projects: Project[] = [
     category: "web",
 
     shortDescription:
-      "A complete school ERP for managing students, teachers, parents, assessments, fees and results.",
+      "A complete school ERP for managing students, teachers, parents, assessments, quiz CBT, fees, results and more",
 
     role: "Full-Stack Development",
 
@@ -30,19 +30,19 @@ export const projects: Project[] = [
       "PostgreSQL",
     ],
 
-    image: "/images/projects/sms/sms1.png",
+    image: "/images/projects/sms/smsquickaction.PNG",
 
     images: [
-      "/images/projects/sms/sms1.png",
-      "/images/projects/sms/sms2.png",
-      "/images/projects/sms/sms3.png",
-      "/images/projects/sms/sms4.png",
-      "/images/projects/sms/sms5.png",
-      "/images/projects/sms/sms6.png",
+      "/images/projects/sms/smsstudents.PNG",
+      "/images/projects/sms/smsreceipt.PNG",
+      "/images/projects/sms/smspayment.PNG",
+      "/images/projects/sms/smsquizmgt.PNG",
+      "/images/projects/sms/smsresult.PNG",
+      "/images/projects/sms/smsnotifications.PNG",
     ],
 
     github: "",
-    live: "",
+    live: "https://emmightedu.vercel.app",
 
     featured: true,
   },

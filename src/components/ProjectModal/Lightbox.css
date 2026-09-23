@@ -4,7 +4,7 @@ position:fixed;
 
 inset:0;
 
-background:rgba(0,0,0,.92);
+background:rgba(0,0,0,.75);
 
 display:flex;
 
@@ -41,21 +41,32 @@ border-radius:20px;
 
 position:absolute;
 
-top:-55px;
+top: 0;
 
-right:0;
+right: 0;
 
-width:45px;
+width:40px;
 
-height:45px;
+height:40px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
 
 border:none;
 
 border-radius:50%;
 
-background:white;
+background:rgba(255, 255, 255, .95);
+
+backdrop-filter: blur(20px);
 
 cursor:pointer;
+transition: .3s;
+}
+
+.lightbox-close:hover{
+    background:var(--primary);
+    transform:rotate(90deg) scale(1.05);
 }
 
 .lightbox-arrow{

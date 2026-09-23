@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 2rem;
 
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .about-title {
   font-size: 2rem;
@@ -14,7 +14,7 @@
 .about-subtitle {
   color: var(--primary);
 
-  font-weight: 600;
+  font-weight: 500;
 
   margin-bottom: 1rem;
 }

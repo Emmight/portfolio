@@ -3,7 +3,9 @@ import {
   FaServer,
   FaDatabase,
   FaWordpress,
+  FaWix,
   FaPaintBrush,
+  FaElementor,
   FaTools,
   FaCss3Alt,
   FaReact,
@@ -13,6 +15,7 @@ import {
   FaFigma,
   FaPalette,
   FaPhotoVideo,
+  FaSquarespace,
 } from "react-icons/fa";
 
 import {
@@ -80,6 +83,9 @@ export const skills = {
 
       technologies: [
         { name: "WordPress", icon: FaWordpress },
+        { name: "Elementor", icon: FaElementor },
+        { name: "Wix", icon: FaWix },
+        { name: "SquareSpace", icon: FaSquarespace },
       ],
     },
 
@@ -98,14 +104,20 @@ export const skills = {
       name: "Adobe Photoshop",
       icon: FaPalette,
     },
-
+    
     {
-      name: "After Effects",
-      icon: FaPhotoVideo,
+      name: "CorelDraw",
+      icon: FaPalette,
+    },
+   
+    {
+      name: "Pixellab",
+      icon: FaPalette,
     },
 
+
     {
-      name: "Premiere Pro",
+      name: "CapCut",
       icon: FaPhotoVideo,
     },
 
